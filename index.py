@@ -6,9 +6,9 @@ import datetime
 
 def handler(event, context):
     data = {
-        'event': str(event),
-        'timestamp': datetime.datetime.utcnow().isoformat(),
-        'context':str(context)
+        'event': str(event['body']),
+        'timestamp': datetime.datetime.utcnow().isoformat()
+        
     }
     return {'statusCode': 200,
             'body': json.dumps(data),
