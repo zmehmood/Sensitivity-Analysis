@@ -7,7 +7,7 @@ import datetime
 def handler(event, context):
     data = {
         'event': str(event),
-        'timestamp': datetime.datetime.utcnow().isoformat()
+        'timestamp': datetime.datetime.utcnow().isoformat(),
         'context':str(context)
     }
     return {'statusCode': 200,
